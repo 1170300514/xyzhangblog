@@ -6,7 +6,7 @@
   <link href="https://1170300514.github.io/atom.xml" rel="self"/>
   
   <link href="https://1170300514.github.io/"/>
-  <updated>2020-08-28T12:42:47.276Z</updated>
+  <updated>2020-09-24T07:39:06.661Z</updated>
   <id>https://1170300514.github.io/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Block使用总结</title>
+    <link href="https://1170300514.github.io/2020/09/24/block-shi-yong-zong-jie/"/>
+    <id>https://1170300514.github.io/2020/09/24/block-shi-yong-zong-jie/</id>
+    <published>2020-09-24T15:27:03.000Z</published>
+    <updated>2020-09-24T07:39:06.661Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Block应用场景&quot;&gt;&lt;a href=&quot;#Block应用场景&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
-    <link href="https://1170300514.github.io/2020/08/28/hello-world/"/>
-    <id>https://1170300514.github.io/2020/08/28/hello-world/</id>
-    <published>2020-08-28T12:42:47.276Z</published>
-    <updated>2020-08-28T12:42:47.276Z</updated>
+    <link href="https://1170300514.github.io/2020/09/24/hello-world/"/>
+    <id>https://1170300514.github.io/2020/09/24/hello-world/</id>
+    <published>2020-09-24T07:39:06.661Z</published>
+    <updated>2020-09-24T07:39:06.661Z</updated>
     
     
       
@@ -42,7 +63,7 @@
     <link href="https://1170300514.github.io/2020/08/27/my-new-pages/"/>
     <id>https://1170300514.github.io/2020/08/27/my-new-pages/</id>
     <published>2020-08-27T21:09:08.000Z</published>
-    <updated>2020-08-28T12:42:47.276Z</updated>
+    <updated>2020-09-24T07:39:06.661Z</updated>
     
     
       

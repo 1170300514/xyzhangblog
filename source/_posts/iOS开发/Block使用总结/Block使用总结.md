@@ -52,7 +52,7 @@ tags:
 
    
 
-### Block使用注意事项：
+### Block使用注意事项
 
 1. 局部变量与__block修饰符
 
@@ -130,7 +130,7 @@ __weak __typeof(self) weakSelf = self;
 
      这个block本身存在于静态方法中，虽然block对self强引用，但self不持有该静态方法，所以完全可以在block内部使用self
 
-### block与内存管理：
+### block与内存管理
 
 根据Block在内存中的位置分为三种类型：
 

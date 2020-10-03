@@ -31,7 +31,7 @@ tags:
 
 设置完成后的结果如下图所示：
 
-![端子设置](TencentOSTiny体验.assets/端子设置.jpg)
+![端子设置](TencentOSTiny体验/端子设置.jpg)
 
 
 
@@ -45,7 +45,7 @@ tags:
 
   可以直接在MDK软件上在线安装，在导航栏打开Pack安装页面，找到STM32G0xx，点击install安装
 
-  <img src="TencentOSTiny体验.assets/image-20201001164941942.png" alt="image-20201001164941942" style="zoom:50%;" />
+  ![image-20201001164941942](TencentOSTiny体验/image-20201001164941942.png)
 
 #### 安装ST-Link驱动
 
@@ -55,19 +55,19 @@ https://www.st.com/content/st_com/zh/products/development-tools/software-develop
 
 安装完成后打开设备管理器，查看通用串行总线设备，出现如下所示，则驱动安装成功
 
-![image-20201001165811036](TencentOSTiny体验.assets/image-20201001165811036.png)
+![image-20201001165811036](TencentOSTiny体验/image-20201001165811036.png)
 
 #### CH340串口驱动安装
 
 直接通过互联网搜索CH340串口芯片的驱动进行下载安装即可
 
-![image-20201001163019855](TencentOSTiny体验.assets\image-20201001163019855.png)
+![image-20201001163019855](TencentOSTiny体验/image-20201001163019855.png)
 
 #### 安装串口调试助手
 
 工具下载：http://www.daxia.com/download/sscom.rar
 
-![image-20201001164049729](TencentOSTiny体验.assets/image-20201001164049729.png)
+![image-20201001164049729](TencentOSTiny体验/image-20201001164049729.png)
 
 根据PC和终端之间的连接选择正确的串行端口。
 
@@ -75,7 +75,7 @@ https://www.st.com/content/st_com/zh/products/development-tools/software-develop
 
 ~~这里遇到一个非常蠢的问题：STLink和USB需要同时连接到板子上，否则就会出现电脑不识别CH340设备的现象~~
 
-![image-20201001172758481](TencentOSTiny体验.assets/image-20201001172758481.png)
+![image-20201001172758481](TencentOSTiny体验/image-20201001172758481.png)
 
 
 
@@ -116,13 +116,13 @@ AT串口使用UART0，默认的Tx为GPIO1，Rx为GPIO3。但因为ESP8266的UART
 
 2. 选择ESP8266下载工具
 
-   ![image-20201001175540012](TencentOSTiny体验.assets/image-20201001175540012.png)
+   ![image-20201001175540012](TencentOSTiny体验/image-20201001175540012.png)
 
    按照上图设置进行配置点击Start后等待下载完成
 
 3. 下载完成
 
-   ![image-20201001175803789](TencentOSTiny体验.assets/image-20201001175803789.png)
+   ![image-20201001175803789](TencentOSTiny体验/image-20201001175803789.png)
 
    完成后即可关闭工具，**将串口选择端子恢复到默认状态**
 
@@ -179,13 +179,13 @@ AT串口使用UART0，默认的Tx为GPIO1，Rx为GPIO3。但因为ESP8266的UART
 
 编辑`mqtt_iot_explorer_tc_ch20_oled.c`文件，修改`esp8266_tencent_firmware_join_ap`函数中的要接入的WiFi名称和密码
 
-![image-20201001200336241](TencentOSTiny体验.assets/image-20201001200336241.png)
+![image-20201001200336241](TencentOSTiny体验/image-20201001200336241.png)
 
 #### 修改云端对接信息
 
 修改文件中的宏定义，对应腾讯云中的配置信息
 
-![image-20201001200710678](TencentOSTiny体验.assets/image-20201001200710678.png)
+![image-20201001200710678](TencentOSTiny体验/image-20201001200710678.png)
 
 ~~**此处可自行发挥修改程序代码，实现更加复杂有趣的功能**~~
 
@@ -193,7 +193,7 @@ AT串口使用UART0，默认的Tx为GPIO1，Rx为GPIO3。但因为ESP8266的UART
 
 编译完成->进入工程配置界面->选择debug选项->选择ST-Link Debugger->点击settings 该页面中的Unit选择ST-Link/V2，Port选择SW，点击确认保存配置；
 
-![img](TencentOSTiny体验.assets/@9ZW3`FJ`Z9RJ9`LLK7AO8A.png)
+![img](TencentOSTiny体验/@9ZW3`FJ`Z9RJ9`LLK7AO8A.png)
 
 回到主界面点击下载；
 
@@ -203,11 +203,11 @@ AT串口使用UART0，默认的Tx为GPIO1，Rx为GPIO3。但因为ESP8266的UART
 
 WiFi连接成功
 
-![img](TencentOSTiny体验.assets/U1[2$YTXDK@T0G@VTI01PSP.png)
+![img](TencentOSTiny体验/U1[2$YTXDK@T0G@VTI01PSP.png)
 
 接入云平台成功
 
-![image-20201001204024547](TencentOSTiny体验.assets/image-20201001204024547.png)
+![image-20201001204024547](TencentOSTiny体验/image-20201001204024547.png)
 
 上述步骤完成后即可回到腾讯云界面查看数据上报情况
 
@@ -215,19 +215,20 @@ WiFi连接成功
 
 - 开发板
 
-![image-20201001215542720](TencentOSTiny体验.assets/image-20201001215542720.png)
+![image-20201001215542720](TencentOSTiny体验/image-20201001215542720.png)
 
 - 腾讯云数据展示界面
 
-![image-20201001215415580](TencentOSTiny体验.assets/image-20201001215415580.png)
+![image-20201001215415580](TencentOSTiny体验/image-20201001215415580.png)
 
 - 腾讯连连小程序数据展示界面
 
-<img src="TencentOSTiny体验.assets/image-20201001215931807.png" alt="image-20201001215931807" style="zoom:25%;" />
+![image-20201001215931807](TencentOSTiny体验/image-20201001215931807.png)
 
 - 腾讯连连公众号数据报警界面
 
-<img src="TencentOSTiny体验.assets/image-20201001215758591.png" alt="image-20201001215758591" style="zoom:25%;" />
+![image-20201001215758591](TencentOSTiny体验/image-20201001215758591.png)
+
 
 ## 0x06. 后记
 

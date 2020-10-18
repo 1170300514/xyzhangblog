@@ -6,7 +6,7 @@
   <link href="https://1170300514.github.io/atom.xml" rel="self"/>
   
   <link href="https://1170300514.github.io/"/>
-  <updated>2020-10-18T07:51:18.821Z</updated>
+  <updated>2020-10-18T08:57:32.176Z</updated>
   <id>https://1170300514.github.io/</id>
   
   <author>
@@ -17,23 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://1170300514.github.io/2020/10/18/hello-world/"/>
-    <id>https://1170300514.github.io/2020/10/18/hello-world/</id>
-    <published>2020-10-18T07:51:18.821Z</published>
-    <updated>2020-10-18T07:51:18.821Z</updated>
+    <title>Git强制拉取与推送</title>
+    <link href="https://1170300514.github.io/2020/10/18/git/git-qiang-zhi-la-qu-yu-tui-song/git-qiang-zhi-la-qu-yu-tui-song/"/>
+    <id>https://1170300514.github.io/2020/10/18/git/git-qiang-zhi-la-qu-yu-tui-song/git-qiang-zhi-la-qu-yu-tui-song/</id>
+    <published>2020-10-18T15:52:13.000Z</published>
+    <updated>2020-10-18T08:57:32.176Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;Git强制拉取&quot;&gt;&lt;a href=&quot;#Git强制拉取&quot; class=&quot;headerlink&quot; title=&quot;Git强制拉取&quot;&gt;&lt;/a&gt;Git强制拉取&lt;/h2&gt;&lt;p&gt;有时本地修改代码出现异常，需要将本地修改全部忽略，强制拉取远端&lt;/p&gt;
+&lt;pre class=&quot;</summary>
         
       
     
     
     
+    
+    <category term="git" scheme="https://1170300514.github.io/tags/git/"/>
     
   </entry>
   
@@ -42,7 +45,7 @@
     <link href="https://1170300514.github.io/2020/10/17/bian-cheng-xiang-guan-ji-zhu/protobuf-shi-yong/protobuf-shi-yong/"/>
     <id>https://1170300514.github.io/2020/10/17/bian-cheng-xiang-guan-ji-zhu/protobuf-shi-yong/protobuf-shi-yong/</id>
     <published>2020-10-17T20:54:03.000Z</published>
-    <updated>2020-10-18T07:51:18.821Z</updated>
+    <updated>2020-10-18T08:57:32.212Z</updated>
     
     
       
@@ -69,7 +72,7 @@
     <link href="https://1170300514.github.io/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/"/>
     <id>https://1170300514.github.io/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/</id>
     <published>2020-10-01T21:30:00.000Z</published>
-    <updated>2020-10-18T07:51:18.781Z</updated>
+    <updated>2020-10-18T08:57:32.176Z</updated>
     
     
       
@@ -95,7 +98,7 @@
     <link href="https://1170300514.github.io/2020/09/24/ios-kai-fa/block-shi-yong-zong-jie/block-shi-yong-zong-jie/"/>
     <id>https://1170300514.github.io/2020/09/24/ios-kai-fa/block-shi-yong-zong-jie/block-shi-yong-zong-jie/</id>
     <published>2020-09-24T15:27:03.000Z</published>
-    <updated>2020-10-18T07:51:18.821Z</updated>
+    <updated>2020-10-18T08:57:32.212Z</updated>
     
     
       
@@ -112,31 +115,6 @@
     <category term="iOS" scheme="https://1170300514.github.io/tags/iOS/"/>
     
     <category term="Block" scheme="https://1170300514.github.io/tags/Block/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My new Pages</title>
-    <link href="https://1170300514.github.io/2020/08/27/my-new-pages/"/>
-    <id>https://1170300514.github.io/2020/08/27/my-new-pages/</id>
-    <published>2020-08-27T21:09:08.000Z</published>
-    <updated>2020-10-18T07:51:18.821Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       </summary>
-        
-      
-    
-    
-    
     
   </entry>
   

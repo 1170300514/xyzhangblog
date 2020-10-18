@@ -4,6 +4,7 @@ date: 2020-09-24 15:27:03
 tags: 
     - iOS
     - Block
+summary: 9月末在公司的一次分享，主要介绍了一段时间来使用Block的心得体会和使用经验
 ---
 
 ### Block应用场景
@@ -115,9 +116,9 @@ __weak __typeof(self) weakSelf = self;
 > **解答**:
    >
 > block被赋值到`self`的成员变量时, arc下系统会将该block从栈区拷贝到堆区, 此时block会捕获它所用到的变量使用`__weak`可以保证block和`self`之间不会发生循环引用, 而在Block的代码块内声明`_ _strong`指针, 将会对self产生一个强引用延迟self的释放, 但和直接使用`self`所不同的是, **在Block内声明的指针会在Block的作用域外销毁**, 因此这个循环引用只会持续到block执行完毕为止, 当block执行完毕, strongSelf被销毁, `self`不再被Block所持有, 就可以顺利释放了.
+
    
-   
-   
+
 3. 并不是所有Block里面的self都需要weak
 
    - 调用系统方法：

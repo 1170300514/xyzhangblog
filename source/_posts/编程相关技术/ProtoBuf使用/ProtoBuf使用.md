@@ -5,7 +5,7 @@ tags:
     - ProtoBuf
     - 序列化
     - 反序列化
-    
+summary: 最近经常听到PB一词，了解后得知其为Google推出的序列化数据格式Protocol Buffers，趁周末总结一下使用方法及优缺点
 ---
 
 ## 0x00 序列化

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="STM32+TencentOSTiny实现甲醛传感器, 生活，编程，阅读">
+    <meta name="keywords" content="提升hexo博客写作效率, 生活，编程，阅读">
     <meta name="description" content="既然选择了远方 便只顾风雨兼程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>STM32+TencentOSTiny实现甲醛传感器 | xyzhangblog</title>
+    <title>提升hexo博客写作效率 | xyzhangblog</title>
     <link rel="icon" type="image/png" href="/xyzhangblog/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/xyzhangblog/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/xyzhangblog/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/xyzhangblog/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">STM32+TencentOSTiny实现甲醛传感器</h1>
+                    <h1 class="description center-align post-title">提升hexo博客写作效率</h1>
                 </div>
             </div>
         </div>
@@ -431,12 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/xyzhangblog/tags/IoT/">
-                                <span class="chip bg-color">IoT</span>
-                            </a>
-                        
-                            <a href="/xyzhangblog/tags/TencentOS-Tiny/">
-                                <span class="chip bg-color">TencentOS-Tiny</span>
+                            <a href="/xyzhangblog/tags/hexo/">
+                                <span class="chip bg-color">hexo</span>
                             </a>
                         
                     </div>
@@ -451,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-01
+                    2020-10-18
                 </div>
                 
 
@@ -465,14 +461,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    904
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
 
@@ -487,148 +483,129 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="0x00-环境说明"><a href="#0x00-环境说明" class="headerlink" title="0x00. 环境说明"></a>0x00. 环境说明</h2><ul>
-<li>软件环境：win10 64位 + MDK</li>
-<li>开发板：TOS_EVB_G0开发板 x 1</li>
-<li>传感器：英国 Dart 甲醛传感器 x 1</li>
-<li>扩展板：E53甲醛传感器底板 x 1</li>
-<li>下载器：ST-Link下载器 x 1</li>
-</ul>
-<h2 id="0x01-安装基础工具（硬件）"><a href="#0x01-安装基础工具（硬件）" class="headerlink" title="0x01. 安装基础工具（硬件）"></a>0x01. 安装基础工具（硬件）</h2><h4 id="连接ST-Link与开发板，严格按照如下方式进行连接否则可能烧坏MCU"><a href="#连接ST-Link与开发板，严格按照如下方式进行连接否则可能烧坏MCU" class="headerlink" title="连接ST-Link与开发板，严格按照如下方式进行连接否则可能烧坏MCU"></a>连接ST-Link与开发板，严格按照如下方式进行连接否则可能烧坏MCU</h4><p>开发板3v3—&gt; STlink 3.3V<br>开发板DIO—&gt; STlink SWDIO<br>开发板CLK—&gt; STlink SWCLK<br>开发板GND—&gt; STlink GND</p>
-<h4 id="设置跳线帽，切换boot选择端子和串口选择端子"><a href="#设置跳线帽，切换boot选择端子和串口选择端子" class="headerlink" title="设置跳线帽，切换boot选择端子和串口选择端子"></a>设置跳线帽，切换boot选择端子和串口选择端子</h4><ol>
-<li>开发版上的ESP固件下载配置切换到GND，使wifi处于下载模式</li>
-<li>Boot选择切换到0</li>
-<li>串口切换端子置于中间，使ESP8266直接与PC串口连接</li>
+                <ol>
+<li>新建文章</li>
 </ol>
-<p>设置完成后的结果如下图所示：</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/%E7%AB%AF%E5%AD%90%E8%AE%BE%E7%BD%AE.jpg" class="" title="端子设置">
-
-
-
-<h2 id="0x02-安装基础工具（软件）"><a href="#0x02-安装基础工具（软件）" class="headerlink" title="0x02. 安装基础工具（软件）"></a>0x02. 安装基础工具（软件）</h2><h4 id="安装MDK软件"><a href="#安装MDK软件" class="headerlink" title="安装MDK软件"></a>安装MDK软件</h4><ul>
-<li><p>激活软件，导入License，注意这部需要以管理员身份运行</p>
+<pre class=" language-bash"><code class="language-bash">hexo new post <span class="token string">"文章标题"</span></code></pre>
+<p>为保证目录结构清晰易于查找，建议将生成的markdown文件放置在文件夹下<br>**<u>若有插入图片的需求需要在markdown文件的同级目录下新建同名文件夹，用于存储图片，文章中使用相对路径进行图片的引用（参考<a target="_blank" rel="noopener" href="https://github.com/1170300514/xyzhangblog/tree/master/source/_posts/IoT/TencentOSTiny%E7%94%B2%E9%86%9B%E4%BC%A0%E6%84%9F%E5%99%A8">甲醛传感器</a>文章的路径设置方式）</u>**</p>
+<ol start="2">
+<li><p>在文章头信息中添加summary字段用于首页展示，相当于次级标题</p>
+<p>文章头信息有很多可配字段 详细如下：</p>
+<p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th>配置选项</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td><code>Markdown</code> 的文件标题</td>
+<td>文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件创建时的日期时间</td>
+<td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td>author</td>
+<td>根 <code>_config.yml</code> 中的 <code>author</code></td>
+<td>文章作者</td>
+</tr>
+<tr>
+<td>img</td>
+<td><code>featureImages</code> 中的某个值</td>
+<td>文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <code>http://xxx.com/xxx.jpg</code></td>
+</tr>
+<tr>
+<td>top</td>
+<td><code>true</code></td>
+<td>推荐文章（文章是否置顶），如果 <code>top</code> 值为 <code>true</code>，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td>cover</td>
+<td><code>false</code></td>
+<td><code>v1.0.2</code>版本新增，表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td>coverImg</td>
+<td>无</td>
+<td><code>v1.0.2</code>版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>password</td>
+<td>无</td>
+<td>文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 <code>password</code> 的值，该值必须是用 <code>SHA256</code> 加密后的密码，防止被他人识破。前提是在主题的 <code>config.yml</code> 中激活了 <code>verifyPassword</code> 选项</td>
+</tr>
+<tr>
+<td>toc</td>
+<td><code>true</code></td>
+<td>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 <code>config.yml</code> 中激活了 <code>toc</code> 选项</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td><code>false</code></td>
+<td>是否开启数学公式支持 ，本文章是否开启 <code>mathjax</code>，且需要在主题的 <code>_config.yml</code> 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>无</td>
+<td>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>无</td>
+<td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>无</td>
+<td>文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>文章标题</td>
+<td>文章关键字，SEO 时需要</td>
+</tr>
+<tr>
+<td>reprintPolicy</td>
+<td>cc_by</td>
+<td>文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
+</tr>
+</tbody></table>
+<p>以下为文章的 <code>Front-matter</code> 示例。</p>
+<h3 id="最简示例"><a href="#最简示例" class="headerlink" title="最简示例"></a>最简示例</h3><pre><code>---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+---</code></pre>
+<h3 id="最全示例"><a href="#最全示例" class="headerlink" title="最全示例"></a>最全示例</h3><pre><code>---
+title: typora-vue-theme主题介绍
+date: 2018-09-07 09:25:00
+author: 赵奇
+img: /source/images/xxx.jpg
+top: true
+cover: true
+coverImg: /images/1.jpg
+password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
+toc: false
+mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
+categories: Markdown
+tags:
+  - Typora
+  - Markdown
+---</code></pre>
 </li>
-<li><p>安装单片机型号中对应的Pack</p>
-<p>可以直接在MDK软件上在线安装，在导航栏打开Pack安装页面，找到STM32G0xx，点击install安装</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001164941942.png" class="" title="image-20201001164941942">
-
-</li>
-</ul>
-<h4 id="安装ST-Link驱动"><a href="#安装ST-Link驱动" class="headerlink" title="安装ST-Link驱动"></a>安装ST-Link驱动</h4><p>前往ST官网即可下载：</p>
-<p><a target="_blank" rel="noopener" href="https://www.st.com/content/st_com/zh/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html">https://www.st.com/content/st_com/zh/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-utilities/stsw-link009.html</a></p>
-<p>安装完成后打开设备管理器，查看通用串行总线设备，出现如下所示，则驱动安装成功</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001165811036.png" class="" title="image-20201001165811036">
-
-<h4 id="CH340串口驱动安装"><a href="#CH340串口驱动安装" class="headerlink" title="CH340串口驱动安装"></a>CH340串口驱动安装</h4><p>直接通过互联网搜索CH340串口芯片的驱动进行下载安装即可</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001163019855.png" class="" title="image-20201001163019855">
-
-<h4 id="安装串口调试助手"><a href="#安装串口调试助手" class="headerlink" title="安装串口调试助手"></a>安装串口调试助手</h4><p>工具下载：<a target="_blank" rel="noopener" href="http://www.daxia.com/download/sscom.rar">http://www.daxia.com/download/sscom.rar</a></p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001164049729.png" class="" title="image-20201001164049729">
-
-<p>根据PC和终端之间的连接选择正确的串行端口。</p>
-<p>打开设备管理器，在端口列表（如果没有端口选项需要在“查看”中选取“显示隐藏的设备”）中可以看到连接所使用的端口号</p>
-<p><del>这里遇到一个非常蠢的问题：STLink和USB需要同时连接到板子上，否则就会出现电脑不识别CH340设备的现象</del></p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001172758481.png" class="" title="image-20201001172758481">
-
-
-
-<h2 id="0x03-烧写腾讯云定制固件"><a href="#0x03-烧写腾讯云定制固件" class="headerlink" title="0x03. 烧写腾讯云定制固件"></a>0x03. 烧写腾讯云定制固件</h2><h4 id="下载固件"><a href="#下载固件" class="headerlink" title="下载固件"></a>下载固件</h4><p>下载链接：<a target="_blank" rel="noopener" href="https://github.com/tencentyun/qcloud-iot-esp-wifi">https://github.com/tencentyun/qcloud-iot-esp-wifi</a> 、</p>
-<p>使用git下载的命令如下：</p>
-<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/tencentyun/qcloud-iot-esp-wifi.git</code></pre>
-<h4 id="下载烧写工具"><a href="#下载烧写工具" class="headerlink" title="下载烧写工具"></a>下载烧写工具</h4><p>前往乐鑫官网下载Flash下载工具：</p>
-<p><a target="_blank" rel="noopener" href="https://www.espressif.com/zh-hans/support/download/other-tools">https://www.espressif.com/zh-hans/support/download/other-tools</a></p>
-<h4 id="固件说明"><a href="#固件说明" class="headerlink" title="固件说明"></a>固件说明</h4><p>腾讯云IoT定制的AT模组固件QCloud_IoT_AT_ESP8266，适用于所有FLASH大小为2MB或者2MB以上的 ESP8266模组。 </p>
-<p>AT串口使用UART0，默认的Tx为GPIO1，Rx为GPIO3。但因为ESP8266的UART0 默认会在上电启动期 间输出一些打印，如果打印信息影响设备功能，可在上电期间将 U0TXD(GPIO1)、U0RXD(GPIO3) 分别 与 U0RTS (GPIO15)，U0CTS(GPIO13)进行交换，以屏蔽打印。因此提供两个版本的固件：</p>
-<ul>
-<li>名称包含UART_1_3的固件串口使用的Tx为GPIO1，Rx为GPIO3。 </li>
-<li>名称包含UART_15_13的固件串口使用的Tx为GPIO15，Rx为GPIO13。 </li>
-</ul>
-<p>进入QCloud_IoT_AT_ESP8266_FW，本文中我们使用第一个固件</p>
-<h4 id="烧写固件"><a href="#烧写固件" class="headerlink" title="烧写固件"></a>烧写固件</h4><h5 id="运行下载的乐鑫Flash烧写工具"><a href="#运行下载的乐鑫Flash烧写工具" class="headerlink" title="运行下载的乐鑫Flash烧写工具"></a>运行下载的乐鑫Flash烧写工具</h5><ol>
-<li><p>选择Develop Mode</p>
-</li>
-<li><p>选择ESP8266下载工具</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001175540012.png" class="" title="image-20201001175540012">
-
-<p>按照上图设置进行配置点击Start后等待下载完成</p>
-</li>
-<li><p>下载完成</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001175803789.png" class="" title="image-20201001175803789">
-
-<p>完成后即可关闭工具，<strong>将串口选择端子恢复到默认状态</strong></p>
+<li><p>文章内容撰写完成后使用hexo命令在本地运行</p>
+<pre class=" language-bash"><code class="language-bash">hexo clean
+hexo generate
+hexo server</code></pre>
+<p>查看无误后push到github触发CI生成网页</p>
 </li>
 </ol>
-<h2 id="0x04-接入腾讯云IoT"><a href="#0x04-接入腾讯云IoT" class="headerlink" title="0x04. 接入腾讯云IoT"></a>0x04. 接入腾讯云IoT</h2><h3 id="云端操作"><a href="#云端操作" class="headerlink" title="云端操作"></a>云端操作</h3><h4 id="新建项目及产品"><a href="#新建项目及产品" class="headerlink" title="新建项目及产品"></a>新建项目及产品</h4><p>项目及产品创建时保留默认选项即可</p>
-<h4 id="数据模板"><a href="#数据模板" class="headerlink" title="数据模板"></a>数据模板</h4><p>产品界面点击“数据模板”，点击“导入json”，导入如下的json代码</p>
-<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
-  <span class="token property">"version"</span><span class="token operator">:</span> <span class="token string">"1.0"</span><span class="token punctuation">,</span>
-  <span class="token property">"profile"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token property">"ProductId"</span><span class="token operator">:</span> <span class="token string">"BDDSF87WEA"</span><span class="token punctuation">,</span>
-    <span class="token property">"CategoryId"</span><span class="token operator">:</span> <span class="token string">"1"</span>
-  <span class="token punctuation">}</span><span class="token punctuation">,</span>
-  <span class="token property">"properties"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
-    <span class="token punctuation">{</span>
-      <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"ch20_ppm_value"</span><span class="token punctuation">,</span>
-      <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"甲醛浓度值"</span><span class="token punctuation">,</span>
-      <span class="token property">"desc"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
-      <span class="token property">"mode"</span><span class="token operator">:</span> <span class="token string">"r"</span><span class="token punctuation">,</span>
-      <span class="token property">"define"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-        <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"float"</span><span class="token punctuation">,</span>
-        <span class="token property">"min"</span><span class="token operator">:</span> <span class="token string">"0"</span><span class="token punctuation">,</span>
-        <span class="token property">"max"</span><span class="token operator">:</span> <span class="token string">"2"</span><span class="token punctuation">,</span>
-        <span class="token property">"start"</span><span class="token operator">:</span> <span class="token string">"0"</span><span class="token punctuation">,</span>
-        <span class="token property">"step"</span><span class="token operator">:</span> <span class="token string">"0.001"</span><span class="token punctuation">,</span>
-        <span class="token property">"unit"</span><span class="token operator">:</span> <span class="token string">"ppm(mg/m3)"</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token property">"required"</span><span class="token operator">:</span> <span class="token boolean">false</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"events"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
-  <span class="token property">"actions"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span></code></pre>
-<h4 id="创建设备"><a href="#创建设备" class="headerlink" title="创建设备"></a>创建设备</h4><p>点击“设备调试”，进入后点击“新建设备”，创建成功后进入设备可以看到产品ID、设备名称、设备密钥等相关信息；</p>
-<h3 id="传感器端操作"><a href="#传感器端操作" class="headerlink" title="传感器端操作"></a>传感器端操作</h3><p>进入 &lt; TencentOS-tiny\board\TencentOS_tiny_EVB_G0\KEIL\mqtt_iot_explorer_tc_ch20_oled&gt; 目录，打开TencentOS_tiny.uvprojx工程。</p>
-<h4 id="修改Wifi接入信息"><a href="#修改Wifi接入信息" class="headerlink" title="修改Wifi接入信息"></a>修改Wifi接入信息</h4><p>编辑<code>mqtt_iot_explorer_tc_ch20_oled.c</code>文件，修改<code>esp8266_tencent_firmware_join_ap</code>函数中的要接入的WiFi名称和密码</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001200336241.png" class="" title="image-20201001200336241">
-
-<h4 id="修改云端对接信息"><a href="#修改云端对接信息" class="headerlink" title="修改云端对接信息"></a>修改云端对接信息</h4><p>修改文件中的宏定义，对应腾讯云中的配置信息</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001200710678.png" class="" title="image-20201001200710678">
-
-<p><del><strong>此处可自行发挥修改程序代码，实现更加复杂有趣的功能</strong></del></p>
-<h4 id="编译下载"><a href="#编译下载" class="headerlink" title="编译下载"></a>编译下载</h4><p>编译完成-&gt;进入工程配置界面-&gt;选择debug选项-&gt;选择ST-Link Debugger-&gt;点击settings 该页面中的Unit选择ST-Link/V2，Port选择SW，点击确认保存配置；</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/@9ZW3%60FJ%60Z9RJ9%60LLK7AO8A.png" class="" title="img">
-
-<p>回到主界面点击下载；</p>
-<h4 id="使用串口助手查看日志"><a href="#使用串口助手查看日志" class="headerlink" title="使用串口助手查看日志"></a>使用串口助手查看日志</h4><p>打开串口助手后，点击打开串口，点击开发板上的reset按钮，程序开始运行，可在主界面中查看运行日志</p>
-<p>WiFi连接成功</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/U1%5B2$YTXDK@T0G@VTI01PSP.png" class="" title="img">
-
-<p>接入云平台成功</p>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001204024547.png" class="" title="image-20201001204024547">
-
-<p>上述步骤完成后即可回到腾讯云界面查看数据上报情况</p>
-<h2 id="0x05-成品展示"><a href="#0x05-成品展示" class="headerlink" title="0x05. 成品展示"></a>0x05. 成品展示</h2><ul>
-<li>开发板</li>
-</ul>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001215542720.png" class="" title="image-20201001215542720">
-
-<ul>
-<li>腾讯云数据展示界面</li>
-</ul>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001215415580.png" class="" title="image-20201001215415580">
-
-<ul>
-<li>腾讯连连小程序数据展示界面</li>
-</ul>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001215931807.png" class="" title="image-20201001215931807">
-
-<ul>
-<li>腾讯连连公众号数据报警界面</li>
-</ul>
-<img src="/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/image-20201001215758591.png" class="" title="image-20201001215758591">
-
-
-<h2 id="0x06-后记"><a href="#0x06-后记" class="headerlink" title="0x06. 后记"></a>0x06. 后记</h2><p>感谢 @supowang 大佬提供的极其详细的<a target="_blank" rel="noopener" href="http://mk.oa.com/note/817">教程</a>，本文中大部分内容来自于其所写的教程步骤，另外添加了少部分自己在实践过程中的踩坑记录，后续有时间会尝试接入其他传感器完成更复杂更好玩的实践。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -672,7 +649,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://1170300514.github.io/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/">https://1170300514.github.io/xyzhangblog/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/</a>
+                    <a href="https://1170300514.github.io/xyzhangblog/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/">https://1170300514.github.io/xyzhangblog/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -710,12 +687,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/xyzhangblog/tags/IoT/">
-                                    <span class="chip bg-color">IoT</span>
-                                </a>
-                            
-                                <a href="/xyzhangblog/tags/TencentOS-Tiny/">
-                                    <span class="chip bg-color">TencentOS-Tiny</span>
+                                <a href="/xyzhangblog/tags/hexo/">
+                                    <span class="chip bg-color">hexo</span>
                                 </a>
                             
                         </div>
@@ -886,7 +859,7 @@
         repo: 'xyzhangblog',
         owner: '1170300514',
         admin: ["1170300514"],
-        id: '2020-10-01T21-30-00',
+        id: '2020-10-18T16-57-36',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -910,29 +883,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/xyzhangblog/2020/10/17/bian-cheng-xiang-guan-ji-zhu/protobuf-shi-yong/protobuf-shi-yong/">
+                <a href="/xyzhangblog/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/">
                     <div class="card-image">
                         
                         
-                        <img src="/xyzhangblog/medias/featureimages/4.jpg" class="responsive-img" alt="ProtoBuf使用总结">
+                        <img src="/xyzhangblog/medias/featureimages/13.jpg" class="responsive-img" alt="提升hexo博客写作效率">
                         
-                        <span class="card-title">ProtoBuf使用总结</span>
+                        <span class="card-title">提升hexo博客写作效率</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            最近经常听到PB一词，了解后得知其为Google推出的序列化数据格式Protocol Buffers，趁周末总结一下使用方法及优缺点
+                            编写Hexo博客文章的步骤总结，配合Matery主题的特殊设置内容
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -941,19 +915,12 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/xyzhangblog/tags/ProtoBuf/">
-                        <span class="chip bg-color">ProtoBuf</span>
-                    </a>
-                    
-                    <a href="/xyzhangblog/tags/%E5%BA%8F%E5%88%97%E5%8C%96/">
-                        <span class="chip bg-color">序列化</span>
-                    </a>
-                    
-                    <a href="/xyzhangblog/tags/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/">
-                        <span class="chip bg-color">反序列化</span>
+                    <a href="/xyzhangblog/tags/hexo/">
+                        <span class="chip bg-color">hexo</span>
                     </a>
                     
                 </div>
@@ -967,24 +934,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/xyzhangblog/2020/09/24/ios-kai-fa/block-shi-yong-zong-jie/block-shi-yong-zong-jie/">
+                <a href="/xyzhangblog/2020/10/18/git/git-qiang-zhi-la-qu-yu-tui-song/git-qiang-zhi-la-qu-yu-tui-song/">
                     <div class="card-image">
                         
                         
-                        <img src="/xyzhangblog/medias/featureimages/2.jpg" class="responsive-img" alt="Block使用总结">
+                        <img src="/xyzhangblog/medias/featureimages/4.jpg" class="responsive-img" alt="Git强制拉取与推送">
                         
-                        <span class="card-title">Block使用总结</span>
+                        <span class="card-title">Git强制拉取与推送</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            9月末在公司的一次分享，主要介绍了一段时间来使用Block的心得体会和使用经验
+                            使用Git遇到的一些与解决冲突相关的操作 TODO：解冲突方法
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-09-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-18
                             </span>
                         <span class="publish-author">
                             
@@ -997,12 +964,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/xyzhangblog/tags/iOS/">
-                        <span class="chip bg-color">iOS</span>
-                    </a>
-                    
-                    <a href="/xyzhangblog/tags/Block/">
-                        <span class="chip bg-color">Block</span>
+                    <a href="/xyzhangblog/tags/git/">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>

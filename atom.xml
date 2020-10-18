@@ -6,7 +6,7 @@
   <link href="https://1170300514.github.io/atom.xml" rel="self"/>
   
   <link href="https://1170300514.github.io/"/>
-  <updated>2020-10-18T08:57:32.176Z</updated>
+  <updated>2020-10-18T11:45:15.286Z</updated>
   <id>https://1170300514.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>提升hexo博客写作效率</title>
+    <link href="https://1170300514.github.io/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/"/>
+    <id>https://1170300514.github.io/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/</id>
+    <published>2020-10-18T16:57:36.000Z</published>
+    <updated>2020-10-18T11:45:15.286Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;新建文章&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&quot; language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;hexo new post &lt;span class=&quot;token</summary>
+        
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="https://1170300514.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git强制拉取与推送</title>
     <link href="https://1170300514.github.io/2020/10/18/git/git-qiang-zhi-la-qu-yu-tui-song/git-qiang-zhi-la-qu-yu-tui-song/"/>
     <id>https://1170300514.github.io/2020/10/18/git/git-qiang-zhi-la-qu-yu-tui-song/git-qiang-zhi-la-qu-yu-tui-song/</id>
     <published>2020-10-18T15:52:13.000Z</published>
-    <updated>2020-10-18T08:57:32.176Z</updated>
+    <updated>2020-10-18T11:45:15.246Z</updated>
     
     
       
@@ -45,7 +71,7 @@
     <link href="https://1170300514.github.io/2020/10/17/bian-cheng-xiang-guan-ji-zhu/protobuf-shi-yong/protobuf-shi-yong/"/>
     <id>https://1170300514.github.io/2020/10/17/bian-cheng-xiang-guan-ji-zhu/protobuf-shi-yong/protobuf-shi-yong/</id>
     <published>2020-10-17T20:54:03.000Z</published>
-    <updated>2020-10-18T08:57:32.212Z</updated>
+    <updated>2020-10-18T11:45:15.286Z</updated>
     
     
       
@@ -72,7 +98,7 @@
     <link href="https://1170300514.github.io/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/"/>
     <id>https://1170300514.github.io/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/</id>
     <published>2020-10-01T21:30:00.000Z</published>
-    <updated>2020-10-18T08:57:32.176Z</updated>
+    <updated>2020-10-18T11:45:15.246Z</updated>
     
     
       
@@ -98,7 +124,7 @@
     <link href="https://1170300514.github.io/2020/09/24/ios-kai-fa/block-shi-yong-zong-jie/block-shi-yong-zong-jie/"/>
     <id>https://1170300514.github.io/2020/09/24/ios-kai-fa/block-shi-yong-zong-jie/block-shi-yong-zong-jie/</id>
     <published>2020-09-24T15:27:03.000Z</published>
-    <updated>2020-10-18T08:57:32.212Z</updated>
+    <updated>2020-10-18T11:45:15.286Z</updated>
     
     
       

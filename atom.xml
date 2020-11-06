@@ -6,7 +6,7 @@
   <link href="https://1170300514.github.io/atom.xml" rel="self"/>
   
   <link href="https://1170300514.github.io/"/>
-  <updated>2020-10-18T11:45:15.286Z</updated>
+  <updated>2020-11-06T12:10:10.640Z</updated>
   <id>https://1170300514.github.io/</id>
   
   <author>
@@ -17,11 +17,90 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>[GCD]使用dispatch_once实现单例</title>
+    <link href="https://1170300514.github.io/2020/11/06/ios-kai-fa/gcd-shi-yong-dispatch-once-shi-xian-dan-li/gcd-shi-yong-dispatch-once-shi-xian-dan-li/"/>
+    <id>https://1170300514.github.io/2020/11/06/ios-kai-fa/gcd-shi-yong-dispatch-once-shi-xian-dan-li/gcd-shi-yong-dispatch-once-shi-xian-dan-li/</id>
+    <published>2020-11-06T16:02:49.000Z</published>
+    <updated>2020-11-06T12:10:10.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;使用dispatch-once执行只需运行一次的线程安全代码&quot;&gt;&lt;a href=&quot;#使用dispatch-once执行只需运行一次的线程安全代码&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="iOS" scheme="https://1170300514.github.io/tags/iOS/"/>
+    
+    <category term="GCD" scheme="https://1170300514.github.io/tags/GCD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>操作系统（一）</title>
+    <link href="https://1170300514.github.io/2020/10/25/ji-suan-ji-ji-chu/cao-zuo-xi-tong/cao-zuo-xi-tong-yi/"/>
+    <id>https://1170300514.github.io/2020/10/25/ji-suan-ji-ji-chu/cao-zuo-xi-tong/cao-zuo-xi-tong-yi/</id>
+    <published>2020-10-25T22:02:32.000Z</published>
+    <updated>2020-11-06T12:10:10.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    
+    <category term="操作系统" scheme="https://1170300514.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>代码编译时都做了什么？</title>
+    <link href="https://1170300514.github.io/2020/10/20/ji-suan-ji-ji-chu/bian-yi-yuan-li/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/"/>
+    <id>https://1170300514.github.io/2020/10/20/ji-suan-ji-ji-chu/bian-yi-yuan-li/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/</id>
+    <published>2020-10-20T21:33:32.000Z</published>
+    <updated>2020-11-06T12:10:10.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       </summary>
+        
+      
+    
+    
+    
+    
+    <category term="编译原理" scheme="https://1170300514.github.io/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>提升hexo博客写作效率</title>
     <link href="https://1170300514.github.io/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/"/>
     <id>https://1170300514.github.io/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/</id>
     <published>2020-10-18T16:57:36.000Z</published>
-    <updated>2020-10-18T11:45:15.286Z</updated>
+    <updated>2020-11-06T12:10:10.640Z</updated>
     
     
       
@@ -47,7 +126,7 @@
     <link href="https://1170300514.github.io/2020/10/18/git/git-qiang-zhi-la-qu-yu-tui-song/git-qiang-zhi-la-qu-yu-tui-song/"/>
     <id>https://1170300514.github.io/2020/10/18/git/git-qiang-zhi-la-qu-yu-tui-song/git-qiang-zhi-la-qu-yu-tui-song/</id>
     <published>2020-10-18T15:52:13.000Z</published>
-    <updated>2020-10-18T11:45:15.246Z</updated>
+    <updated>2020-11-06T12:10:10.600Z</updated>
     
     
       
@@ -71,7 +150,7 @@
     <link href="https://1170300514.github.io/2020/10/17/bian-cheng-xiang-guan-ji-zhu/protobuf-shi-yong/protobuf-shi-yong/"/>
     <id>https://1170300514.github.io/2020/10/17/bian-cheng-xiang-guan-ji-zhu/protobuf-shi-yong/protobuf-shi-yong/</id>
     <published>2020-10-17T20:54:03.000Z</published>
-    <updated>2020-10-18T11:45:15.286Z</updated>
+    <updated>2020-11-06T12:10:10.640Z</updated>
     
     
       
@@ -98,7 +177,7 @@
     <link href="https://1170300514.github.io/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/"/>
     <id>https://1170300514.github.io/2020/10/01/iot/tencentostiny-jia-quan-chuan-gan-qi/tencentostiny-ti-yan/</id>
     <published>2020-10-01T21:30:00.000Z</published>
-    <updated>2020-10-18T11:45:15.246Z</updated>
+    <updated>2020-11-06T12:10:10.600Z</updated>
     
     
       
@@ -124,7 +203,7 @@
     <link href="https://1170300514.github.io/2020/09/24/ios-kai-fa/block-shi-yong-zong-jie/block-shi-yong-zong-jie/"/>
     <id>https://1170300514.github.io/2020/09/24/ios-kai-fa/block-shi-yong-zong-jie/block-shi-yong-zong-jie/</id>
     <published>2020-09-24T15:27:03.000Z</published>
-    <updated>2020-10-18T11:45:15.286Z</updated>
+    <updated>2020-11-06T12:10:10.640Z</updated>
     
     
       

@@ -462,21 +462,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-24
+                    2020-11-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    10 分
                 </div>
                 
 
@@ -491,7 +491,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>归并排序基于分治思想，分治思想在递归上有三个步骤</p>
+                <h1 id="排序算法总结"><a href="#排序算法总结" class="headerlink" title="排序算法总结"></a>排序算法总结</h1><p>放一张小吴大佬的图，转自 <a target="_blank" rel="noopener" href="https://www.cxyxiaowu.com/2026.html">https://www.cxyxiaowu.com/2026.html</a></p>
+
+
+<h3 id="关于时间复杂度："><a href="#关于时间复杂度：" class="headerlink" title="关于时间复杂度："></a>关于时间复杂度：</h3><ol>
+<li>平方阶 O(n2) 排序 各类简单排序：直接插入、直接选择和冒泡排序。</li>
+<li>线性对数阶 O(nlogn) 排序 快速排序、堆排序和归并排序；</li>
+<li>O(n+§) 排序，§ 是介于 0 和 1 之间的常数。 希尔排序</li>
+<li>线性阶 O(n) 排序 基数排序，此外还有桶、箱排序。</li>
+</ol>
+<h3 id="关于稳定性："><a href="#关于稳定性：" class="headerlink" title="关于稳定性："></a>关于稳定性：</h3><ol>
+<li>稳定的排序算法：冒泡排序（遇到相同值，让下一个值移动）、插入排序、归并排序（遇到相同值让左边的先拷贝）和基数排序。</li>
+<li>不是稳定的排序算法：选择排序、快速排序、希尔排序、堆排序。</li>
+</ol>
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>归并排序基于分治思想，分治思想在递归上有三个步骤</p>
 <ul>
 <li>分解(Divide)：将n个元素分成两个含n/2的元素的子序列</li>
 <li>解决(Conquer)：用合并排序法对两个子序列递归的排序</li>
@@ -660,6 +673,63 @@
 <h3 id="优化方法TODO"><a href="#优化方法TODO" class="headerlink" title="优化方法TODO"></a>优化方法TODO</h3><p>查找插入位置时使用二分查找方式</p>
 <p>参考资料：</p>
 <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6d55ac4b72b4">https://www.jianshu.com/p/6d55ac4b72b4</a></p>
+<h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><h3 id="基本性质"><a href="#基本性质" class="headerlink" title="基本性质"></a>基本性质</h3><p>堆是一个数组，可以被看成是一个近似的完全二叉树，除最底层外该树完全充满（如下图）。树的根节点是A[1]，当给定一个节点下标i，可以很容易计算到它的父节点、左孩子右孩子的下标：</p>
+<p>Parent(i) return i/2</p>
+<p>Left(i) return 2i</p>
+<p>Right(i) return 2i+1</p>
+
+
+<p><strong>这样做的优点是</strong>，将i值左移一位，Left过程可以在一条指令中计算出2i；将i值左移一位加一，Right过程可以快速计算得到2i+1；将i右移一位，Parent过程计算得i/2</p>
+<p>堆排序中使用最大堆；优先级队列使用最小堆</p>
+<p><strong>升序采用大顶堆，降序采用小顶堆</strong></p>
+<h3 id="基本思想-4"><a href="#基本思想-4" class="headerlink" title="基本思想"></a>基本思想</h3><p>思想类似选择排序，每次通过堆结构选择出最小或最大值移动到末尾。结合了插入排序和归并排序的优点，时间复杂度O(nlogn)，与归并排序相同；具有空间原址性，与插入排序相同。</p>
+<ol>
+<li>将无序序列构建成堆，根据升序降序需求选择大顶堆或小顶堆；</li>
+<li>将堆顶元素与末尾元素交换，将最大元素“沉”到数组末端；</li>
+<li>重新调整结构，使其满足堆定义，继续交换堆顶元素与当前末尾元素，反复执行调整+交换步骤，直到整个序列有序</li>
+</ol>
+<h3 id="复杂度分析-4"><a href="#复杂度分析-4" class="headerlink" title="复杂度分析"></a>复杂度分析</h3><p>平均时间复杂度：O(nlogn)</p>
+<p>最佳时间复杂度：O(nlogn)</p>
+<p>最差时间复杂度：O(nlogn)</p>
+<p>空间复杂度：O(1)</p>
+<p>排序方式：内排序</p>
+<p>稳定性：不稳定</p>
+<h3 id="代码实现-4"><a href="#代码实现-4" class="headerlink" title="代码实现"></a>代码实现</h3><pre class=" language-java"><code class="language-java">    <span class="token comment" spellcheck="true">// 非递归实现</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">heapSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 1. 将无序序列构建为一个堆</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> array<span class="token punctuation">.</span>length<span class="token operator">/</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">adjustHeap</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span>i<span class="token punctuation">,</span> array<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 2. 交换堆顶和末尾元素</span>
+        <span class="token comment" spellcheck="true">// 3. 重新调整堆结构使其满足堆定义</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> array<span class="token punctuation">.</span>length<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+            array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+            <span class="token function">adjustHeap</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">// 将一个数组调整为大根堆</span>
+    <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">adjustHeap</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//取出当前元素i</span>
+        <span class="token comment" spellcheck="true">//从i节点的左子节点开始比较，若此处调整则继续向下调整，也可递归进行</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token operator">*</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> j<span class="token operator">=</span>j<span class="token operator">*</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">// 左右子节点比较选择较大的</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token operator">&lt;</span>len <span class="token operator">&amp;&amp;</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> array<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                j<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> temp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                i<span class="token operator">=</span>j<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<p>参考资料：</p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chengxiao/p/6129630.html">https://www.cnblogs.com/chengxiao/p/6129630.html</a></p>
+<p>《算法导论》</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -1198,7 +1268,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">10.4k</span>&nbsp;字
+                class="white-color">11.2k</span>&nbsp;字
             
             
             

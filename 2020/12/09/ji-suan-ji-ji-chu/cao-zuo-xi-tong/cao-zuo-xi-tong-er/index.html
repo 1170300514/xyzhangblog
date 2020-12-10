@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码编译时都做了什么？, 生活，编程，阅读">
+    <meta name="keywords" content="操作系统（二）, 生活，编程，阅读">
     <meta name="description" content="既然选择了远方 便只顾风雨兼程">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码编译时都做了什么？ | xyzhangblog</title>
+    <title>操作系统（二） | xyzhangblog</title>
     <link rel="icon" type="image/png" href="/xyzhangblog/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/xyzhangblog/libs/awesome/css/all.css">
@@ -309,12 +309,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/xyzhangblog/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/xyzhangblog/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">代码编译时都做了什么？</h1>
+                    <h1 class="description center-align post-title">操作系统（二）</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/xyzhangblog/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">
-                                <span class="chip bg-color">编译原理</span>
+                            <a href="/xyzhangblog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                <span class="chip bg-color">操作系统</span>
                             </a>
                         
                     </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-20
+                    2020-12-09
                 </div>
                 
 
@@ -461,7 +461,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    52
+                    305
                 </div>
                 
 
@@ -483,7 +483,22 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <script>
+                <h1 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h1><h2 id="必要条件"><a href="#必要条件" class="headerlink" title="必要条件"></a>必要条件</h2><ul>
+<li>互斥：资源只能分配给一个进程；</li>
+<li>占有并等待：已经持有了某个资源的进程又去请求新资源；</li>
+<li>不可抢占：只能由持有进程主动释放；</li>
+<li>环路等待：有两个或两个以上进程组成一条环路，该环路中的每个进程都在等待下一个进程所占有的资源；</li>
+</ul>
+<h2 id="死锁解除"><a href="#死锁解除" class="headerlink" title="死锁解除"></a>死锁解除</h2><p>处理死锁应从破坏死锁出现的四个条件出发</p>
+<ol>
+<li>破坏互斥条件：例如打印机处理多线程抢占的情况时，真正请求物理打印机的进程只有打印机守护进程；</li>
+<li>破坏占有和等待条件：<strong>资源预分配策略</strong>（所有进程在开始执行前请求所需要的全部资源）；</li>
+<li>破坏不可抢占条件；</li>
+<li>破坏环路等待：<strong>资源有序分配策略</strong>；</li>
+</ol>
+<h2 id="死锁避免"><a href="#死锁避免" class="headerlink" title="死锁避免"></a>死锁避免</h2><p>存在某种调度次序使得每个进程运行完毕</p>
+<p>银行家算法</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -526,7 +541,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://1170300514.github.io/xyzhangblog/2020/10/20/ji-suan-ji-ji-chu/bian-yi-yuan-li/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/">https://1170300514.github.io/xyzhangblog/2020/10/20/ji-suan-ji-ji-chu/bian-yi-yuan-li/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/dai-ma-bian-yi-shi-du-zuo-liao-shi-me/</a>
+                    <a href="https://1170300514.github.io/xyzhangblog/2020/12/09/ji-suan-ji-ji-chu/cao-zuo-xi-tong/cao-zuo-xi-tong-er/">https://1170300514.github.io/xyzhangblog/2020/12/09/ji-suan-ji-ji-chu/cao-zuo-xi-tong/cao-zuo-xi-tong-er/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -564,8 +579,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/xyzhangblog/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">
-                                    <span class="chip bg-color">编译原理</span>
+                                <a href="/xyzhangblog/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/">
+                                    <span class="chip bg-color">操作系统</span>
                                 </a>
                             
                         </div>
@@ -736,7 +751,7 @@
         repo: 'xyzhangblog',
         owner: '1170300514',
         admin: ["1170300514"],
-        id: '2020-10-20T21-33-32',
+        id: '2020-12-09T15-44-02',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -760,29 +775,30 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/xyzhangblog/2020/10/25/ji-suan-ji-ji-chu/cao-zuo-xi-tong/cao-zuo-xi-tong-yi/">
+                <a href="/xyzhangblog/2020/12/09/ji-suan-ji-ji-chu/cao-zuo-xi-tong/cao-zuo-xi-tong-er/">
                     <div class="card-image">
                         
                         
-                        <img src="/xyzhangblog/medias/featureimages/10.jpg" class="responsive-img" alt="操作系统（一）">
+                        <img src="/xyzhangblog/medias/featureimages/14.jpg" class="responsive-img" alt="操作系统（二）">
                         
-                        <span class="card-title">操作系统（一）</span>
+                        <span class="card-title">操作系统（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            占坑！总结操作系统知识点！20年底前完成！
+                            总结有关操作系统中死锁的知识点
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -791,6 +807,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -809,24 +826,24 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/xyzhangblog/2020/10/18/bian-cheng-xiang-guan-ji-zhu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/ti-sheng-hexo-bo-ke-xie-zuo-xiao-lu/">
+                <a href="/xyzhangblog/2020/11/24/bian-cheng-ji-chu/shu-zong-jie/er-cha-shu-suan-fa-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/xyzhangblog/medias/featureimages/13.jpg" class="responsive-img" alt="提升hexo博客写作效率">
+                        <img src="/xyzhangblog/medias/featureimages/10.jpg" class="responsive-img" alt="二叉树算法总结">
                         
-                        <span class="card-title">提升hexo博客写作效率</span>
+                        <span class="card-title">二叉树算法总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            编写Hexo博客文章的步骤总结，配合Matery主题的特殊设置内容
+                            二叉树算法总结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-24
                             </span>
                         <span class="publish-author">
                             
@@ -839,8 +856,20 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/xyzhangblog/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/xyzhangblog/tags/%E9%9D%A2%E8%AF%95/">
+                        <span class="chip bg-color">面试</span>
+                    </a>
+                    
+                    <a href="/xyzhangblog/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/xyzhangblog/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/xyzhangblog/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
                     </a>
                     
                 </div>

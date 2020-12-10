@@ -454,21 +454,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-29
+                    2020-12-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    60
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -484,6 +484,107 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/i0PmP86iVv_-TlN8MLWIsw">https://mp.weixin.qq.com/s/i0PmP86iVv_-TlN8MLWIsw</a></p>
+<h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><h2 id="基本特征"><a href="#基本特征" class="headerlink" title="基本特征"></a>基本特征</h2><ol>
+<li><p>并发</p>
+<p>并发指宏观上一段时间内同时运行多个程序，并行指同一时刻能运行多个指令。操作系统使用进程和线程的概念实现程序的并发运行</p>
+</li>
+<li><p>共享</p>
+<p>共享指系统中的资源可以被多个并发进程使用，分为互斥共享（临界资源，使用同步机制实现互斥访问）和同时共享</p>
+</li>
+<li><p>虚拟</p>
+<p>虚拟指把一个物理实体转换为多个逻辑实体，分为时分复用（进程轮流占用处理器）、空分复用</p>
+</li>
+<li><p>异步</p>
+</li>
+</ol>
+<h2 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h2><ol>
+<li>进程管理</li>
+<li>内存管理</li>
+<li>文件管理</li>
+<li>设备管理</li>
+</ol>
+<h1 id="进程管理"><a href="#进程管理" class="headerlink" title="进程管理"></a>进程管理</h1><h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><ol>
+<li><p>进程</p>
+<p>进程是资源分配的基本单位</p>
+</li>
+<li><p>线程</p>
+<p>线程是独立调度的基本单位，一个进程中可以有多个线程，共享进程资源</p>
+</li>
+<li><p><strong>进程与线程的区别</strong></p>
+<p>对于操作系统而言,进程偏重于内存资源管理,线程偏重于CPU调度</p>
+<ul>
+<li><p>拥有资源</p>
+<p>进程拥有资源，线程不拥有资源，但可以访问隶属于进程的资源</p>
+</li>
+<li><p>调度</p>
+<p>线程是独立调度的基本单位，在同一进程中，线程的切换不会引起进程的切换，开销小速度快；从一个进程中的线程切换到另一个进程中的线程会引起进程切换</p>
+</li>
+<li><p>系统开销</p>
+<p>创建或销毁进程时，操作系统需要为其分配或回收资源（内存空间、IO等），切换进程时，操作系统也需要将这些资源更新，开销较大；</p>
+<p>线程切换只需保存设置少量内容（<strong>堆栈、少量寄存器、程序计数器PC</strong>），开销很小。</p>
+</li>
+<li><p>通信方面</p>
+<p>线程间通信可以通过读写同一进程中的数据，进程通信需要借助IPC</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="进程状态切换"><a href="#进程状态切换" class="headerlink" title="进程状态切换"></a>进程状态切换</h2><ul>
+<li>就绪状态（Ready）：等待被调度</li>
+<li>运行状态（running）</li>
+<li>阻塞状态（waiting）：缺少某些必要的资源</li>
+</ul>
+<h2 id="进程调度"><a href="#进程调度" class="headerlink" title="进程调度"></a>进程调度</h2><h3 id="批处理系统-保证吞吐量和周转时间"><a href="#批处理系统-保证吞吐量和周转时间" class="headerlink" title="批处理系统-保证吞吐量和周转时间"></a>批处理系统-保证吞吐量和周转时间</h3><ol>
+<li>先来先服务（FCFS）</li>
+<li>短作业优先（SJF）</li>
+<li>最短剩余时间优先（SRTN）</li>
+</ol>
+<h3 id="交互式系统–快速响应"><a href="#交互式系统–快速响应" class="headerlink" title="交互式系统–快速响应"></a>交互式系统–快速响应</h3><ol>
+<li>时间片轮转</li>
+<li>优先级调度</li>
+<li>多级反馈队列</li>
+</ol>
+<h3 id="实时系统-截止时间前响应"><a href="#实时系统-截止时间前响应" class="headerlink" title="实时系统-截止时间前响应"></a>实时系统-截止时间前响应</h3><h2 id="线程同步的方法✨"><a href="#线程同步的方法✨" class="headerlink" title="线程同步的方法✨"></a>线程同步的方法✨</h2><p>临界区、互斥量主要用于互斥控制；信号量、事件对象主要用于同步控制</p>
+<h3 id="1-临界区"><a href="#1-临界区" class="headerlink" title="1. 临界区"></a>1. 临界区</h3><p>通过对多线程的串行化来访问公共资源或一段代码，速度快，适合控制数据访问。在任何时刻只允许一个线程对共享资源访问，当一个线程访问后其他试图访问的线程被挂起，直到公共资源被释放</p>
+<h3 id="2-互斥量Mutex"><a href="#2-互斥量Mutex" class="headerlink" title="2. 互斥量Mutex"></a>2. 互斥量Mutex</h3><p>只有拥有互斥量的线程才有访问公共资源的权限。互斥量只有一个，当前拥有互斥量的线程处理完任务后必须将线程交出，以便其他线程访问该资源。</p>
+<h3 id="3-信号量"><a href="#3-信号量" class="headerlink" title="3. 信号量"></a>3. <a target="_blank" rel="noopener" href="https://chorer.github.io/2020/03/25/OS-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-5%EF%BC%9A%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5%E4%B8%8E%E8%BF%9B%E7%A8%8B%E4%BA%92%E6%96%A5%EF%BC%88%E4%BA%8C%EF%BC%89%EF%BC%9A%E4%BF%A1%E5%8F%B7%E9%87%8F%E6%9C%BA%E5%88%B6/">信号量</a></h3><p>允许多个线程在同一时刻访问同一资源</p>
+<h3 id="4-事件对象"><a href="#4-事件对象" class="headerlink" title="4. 事件对象"></a>4. 事件对象</h3><p>通过通知操作的方式来保持线程的同步，还可以方便实现对多个线程的优先级比较的操作</p>
+<h2 id="进程通信的方法✨"><a href="#进程通信的方法✨" class="headerlink" title="进程通信的方法✨"></a>进程通信的方法✨</h2><ul>
+<li>进程同步:控制多个进程按一定顺序执行;</li>
+<li>进程通信:进程间传输信息、资源共享、时间通    知、进程控制</li>
+</ul>
+<p>个人认为同步与通信概念上没必要分的特别细，进程通信是一种手段，同步是一种目的．能够通信就是一定是一种同步机制．</p>
+<h3 id="1-匿名管道"><a href="#1-匿名管道" class="headerlink" title="1. 匿名管道"></a>1. 匿名管道</h3><p>IPC最 基本的一种实现机制，基于字节流通信，本质上就是实现一个两进程都能访问的文件，若想要数据流从父进程流向子进程，则关闭父进程的读端（fd[0]）与子进程的写端（fd[1]）；</p>
+<ul>
+<li><p>只能半双工通信(使用pipe函数创建,fd[0]用于读,fd[1]用于写);</p>
+</li>
+<li><p>只能在父子进程或兄弟进程中使用;</p>
+<p><img src="./asset/%E5%8C%BF%E5%90%8D%E7%AE%A1%E9%81%93.png"></p>
+</li>
+</ul>
+<h3 id="2-命名管道-FIFO"><a href="#2-命名管道-FIFO" class="headerlink" title="2. 命名管道(FIFO)"></a>2. 命名管道(FIFO)</h3><p>FIFO常用于C-S应用程序中，FIFO用作汇聚点在客户进程和服务器进程之间传递数据</p>
+<ul>
+<li><p>任意进程间半双工通信，可以在父子进程中使用（使用mkfifo函数创建）</p>
+</li>
+<li><p>命名管道使用前需要使用open()打开，命名管道是设备文件存储在磁盘上，匿名管道是存在于内存中的特殊文件。</p>
+<p>命名管道使用open打开有可能会被阻塞：以读写方式打开一定不会阻塞；以只读方式打开，调用open()函数会被阻塞直到有数据可读；以只写方式打开，调用open函数会被阻塞直到以其他方式打开。</p>
+</li>
+</ul>
+<h3 id="3-消息队列"><a href="#3-消息队列" class="headerlink" title="3. 消息队列"></a>3. 消息队列</h3><p>实现两进程间双向通信，克服了信号传递信息少、管道只能承载无格式字节流以及缓冲区大小受限等缺点。</p>
+<ul>
+<li>可独立于读写进程存在</li>
+<li>避免FIFO的同步阻塞问题，不需要进程自己提供同步方法</li>
+<li>读消息时可以根据消息类型有选择性的接收消息，而不像FIFO只能默认接收</li>
+</ul>
+<h3 id="4-信号量（semophore）"><a href="#4-信号量（semophore）" class="headerlink" title="4. 信号量（semophore）"></a>4. 信号量（semophore）</h3><p>计数器，用于为多个进程提供对共享数据对象的访问。作为一种锁机制，防止某些进程正在访问共享资源时其他进程也访问。</p>
+<h3 id="5-信号（signal）"><a href="#5-信号（signal）" class="headerlink" title="5. 信号（signal）"></a>5. 信号（signal）</h3><p>进程间传递信号，捕获到信号后执行对应绑定的代码，可以实现进程通信的“单播”“广播”</p>
+<h3 id="6-共享内存"><a href="#6-共享内存" class="headerlink" title="6. 共享内存"></a>6. 共享内存</h3><p>允许多个进程共享一个给定的存储区，不需要在进程间复制数据，速度最快；</p>
+<p>需要使用信号量进行访问的同步</p>
+<h3 id="7-Socket套接字"><a href="#7-Socket套接字" class="headerlink" title="7. Socket套接字"></a>7. Socket套接字</h3><p>可用于网络上不同机器间的进程通信</p>
+<h1 id="TODO："><a href="#TODO：" class="headerlink" title="TODO："></a>TODO：</h1><p>经典同步问题：哲学家进餐、读者写者问题、生产者消费者问题</p>
+<p>参考资料</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39763552/article/details/80306734">进程间通信（IPC）——匿名管道和命名管道</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1129585">进程同步和线程同步概述</a></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -998,7 +1099,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">11.2k</span>&nbsp;字
+                class="white-color">13.1k</span>&nbsp;字
             
             
             

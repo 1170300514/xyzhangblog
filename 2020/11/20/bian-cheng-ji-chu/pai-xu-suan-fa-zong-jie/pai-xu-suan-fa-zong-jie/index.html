@@ -462,7 +462,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-19
+                    2020-12-20
                 </div>
                 
 
@@ -700,7 +700,8 @@
     <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">heapSort</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">// 1. 将无序序列构建为一个堆</span>
         <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> array<span class="token punctuation">.</span>length<span class="token operator">/</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token function">adjustHeap</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span>i<span class="token punctuation">,</span> array<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token comment" spellcheck="true">// 从第一个非叶子节点从下至上、从右至左调整结构</span>
+            <span class="token function">adjustHeap</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> i<span class="token punctuation">,</span> array<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
         <span class="token comment" spellcheck="true">// 2. 交换堆顶和末尾元素</span>
         <span class="token comment" spellcheck="true">// 3. 重新调整堆结构使其满足堆定义</span>
@@ -708,13 +709,13 @@
             <span class="token keyword">int</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
             array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
             array<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
-            <span class="token function">adjustHeap</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">,</span>i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token function">adjustHeap</span><span class="token punctuation">(</span>array<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">// 将一个数组调整为大根堆</span>
     <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">adjustHeap</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> array<span class="token punctuation">,</span> <span class="token keyword">int</span> i<span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//取出当前元素i</span>
-        <span class="token comment" spellcheck="true">//从i节点的左子节点开始比较，若此处调整则继续向下调整，也可递归进行</span>
+        <span class="token keyword">int</span> temp <span class="token operator">=</span> array<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 取出当前元素i</span>
+        <span class="token comment" spellcheck="true">// 从i节点的左子节点开始比较，若此处调整则继续向下调整，也可递归进行</span>
         <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> i<span class="token operator">*</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> j<span class="token operator">=</span>j<span class="token operator">*</span><span class="token number">2</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             <span class="token comment" spellcheck="true">// 左右子节点比较选择较大的</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token operator">&lt;</span>len <span class="token operator">&amp;&amp;</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> array<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -722,12 +723,12 @@
             <span class="token punctuation">}</span>
             <span class="token keyword">if</span> <span class="token punctuation">(</span>array<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> temp<span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> array<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                i<span class="token operator">=</span>j<span class="token punctuation">;</span>
+                i<span class="token operator">=</span>j<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// i一直是temp的位置，只不过没有将temp交换过来</span>
             <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
                 <span class="token keyword">break</span><span class="token punctuation">;</span>
             <span class="token punctuation">}</span>
         <span class="token punctuation">}</span>
-        array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        array<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 直接将temp放入到最终位置</span>
     <span class="token punctuation">}</span></code></pre>
 <p>参考资料：</p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chengxiao/p/6129630.html">https://www.cnblogs.com/chengxiao/p/6129630.html</a></p>
@@ -1270,7 +1271,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.1k</span>&nbsp;字
+                class="white-color">13.2k</span>&nbsp;字
             
             
             
